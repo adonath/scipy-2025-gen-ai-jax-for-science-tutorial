@@ -19,8 +19,8 @@ Some thoughts and TODOs:
 
 
 ## Requirements
-Certainly Python and "Array Based Programming". 
-Do we require Jax knowledge of Numpy API, function transforms, PyTrees?
+Certainly Python and "Array Based Programming", Dataclasses
+Do we require basic Jax knowledge of Numpy API, function transforms, PyTrees?
 
 
 ## Content Overview
@@ -40,7 +40,7 @@ Exercises (30 Min):
 - Toy diffusion model (Figure 2 from Song et al.)
 - Self attention visualisation or similar?
 
-BREAK
+-- BREAK ---
 
 ### Diffusion Models for Astronomical Image Generation and Reconstruction (Axel + Francois)
 
@@ -56,13 +56,14 @@ Exercise (45 Min):
   - Option 1 (more science): use it for an image reconstruction task as a diffusion prior
   - Option 2 (more fun): could finetune to generate images following a galaxy class prompt (use CLIP...) or sample images / inpainting
 
-
+-- BREAK ---
 
 ### Protein Languae Models (Patrick and Johanna)
 Overview & Intro (15 Min)
 
 Exercise (45 Min):
 TBD
+
 
 ### Wrap-Up and Outlook (15 Min)
 - Provide summary...
