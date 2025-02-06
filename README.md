@@ -26,7 +26,8 @@ Do we require basic Jax knowledge of Numpy API, function transforms, PyTrees?
 ## Content Overview
 Mix of notebooks and scripts?
 - Notebooks are nice for presentation but not really for production...
-- Maybe Warm-Up and Overviews in 
+- Maybe Warm-Up and Overviews in Notebooks
+- Should we try Marimo? Safe, but more "annoying" for people that have not worked with it before, because of the limitation on variable names. 
 
 ### Intro (10 Min)
 Intro, Motivation for Jax and Gen AI in Science demonstrate Setup 
