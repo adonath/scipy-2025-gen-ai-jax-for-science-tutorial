@@ -36,6 +36,7 @@ Intro, Motivation for Jax and Gen AI in Science demonstrate Setup
 To bring everybody on the same level:
 - Jax basics overview: Numpy API, Lax API, function transforms, PyTrees & dataclasses (Axel)
 - Jax science ecosystem overview (equinox, diffrax, optax, numpyro?, ...) (Patrick?)
+- Demonstrate some `jax.debug.<>`, which will be useful for exercises...
 
 Exercises (30 Min):
 - Toy diffusion model (Figure 2 from Song et al.)
