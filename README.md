@@ -5,42 +5,26 @@ Presented by **Axel Donath**, **Patrick Kidger**, **Johanna Haffner** and **Fran
 This tutorial is an introduction to generative AI for Science with Jax and the Jax scientific ecosystem. 
 
 
-
 ## Setup Instructions
-Use either `uv`, `pixi`, `conda`,  to create a new env from `requirements.txt`.
+Use colab or https://www.nebari.dev -- TBD! We do want GPUs.
 
-Some thoughts and TODOs:
-- do we need separarate envs for the bio and astro part?
-- do we need a container?
-- there will likely be access to https://www.nebari.dev, not sure they provide GPUs
-- actually running training will not be possible, except if models are really small. Provide pre-trained weights, maybe finetune.
-- Upoad pre-trained weights to Zenodo and provide download script, or maybe have the data ready in a Nebari env.
-- It may be unlikely that particpants work on both Astro and Bio, so maybe we structure that exercise time such that they can use the time for their preferred task. However warm-up is for all...
-
+- Do we need separarate envs for the bio and astro part? No.
+- We'll provide preprocessed datasets for the astro section; premade transformer for the bio section.
+- We expect that everything will be of interest to everyone; the focus is on the JAX and GenAI rather than on the scientific applications.
 
 ## Requirements
-Certainly Python and "Array Based Programming", Dataclasses
-Do we require basic Jax knowledge of Numpy API, function transforms, PyTrees?
+NumPy and some SciPy. Dataclasses, functools. No previous knowledge of either JAX or GenAI expected.
 
+### Intro (30 Min)
+Intro, Motivation for JAX and Gen AI in science demonstrate setup. To bring everybody on the same level:
+- JAX basics overview: NumPy API, jit, vmap grad, PyTrees (Axel)
+- Trace time vs runtime (https://kidger.site/thoughts/torch2jax/)
+- JAX science ecosystem overview (Equinox, Diffrax, Optax) (Patrick)
+- `jax.debug.<>`
 
-## Content Overview
-Mix of notebooks and scripts?
-- Notebooks are nice for presentation but not really for production...
-- Maybe Warm-Up and Overviews in Notebooks
-- Should we try Marimo? Safe, but more "annoying" for people that have not worked with it before, because of the limitation on variable names. 
-
-### Intro (10 Min)
-Intro, Motivation for Jax and Gen AI in Science demonstrate Setup 
-
-### Warm-Up (20 Min)
-To bring everybody on the same level:
-- Jax basics overview: Numpy API, Lax API, function transforms, PyTrees & dataclasses (Axel)
-- Jax science ecosystem overview (equinox, diffrax, optax, numpyro?, ...) (Patrick?)
-- Demonstrate some `jax.debug.<>`, which will be useful for exercises...
-
-Exercises (30 Min):
-- Toy diffusion model (Figure 2 from Song et al.)
-- Self attention visualisation or similar?
+### Warm-Up (30 Min)
+- Figure out set-up, open laptops, debug environments, ... !
+- Hands on with the above.
 
 -- BREAK ---
 
@@ -48,33 +32,36 @@ Exercises (30 Min):
 
 Overview & Intro (15 Min) (Francois)
 
+- Continuous-time diffusion (ODEs will be more familiar for a scipy audience)
 
 Exercise (45 Min):
-- Work with a pre-trained model, e.g. https://github.com/Smith42/astroddpm
-- What do we want the people to do for the exercises?
-  - Provide e.g. the UNet implementation (mention alternatives) and implement the forward and reverse diffusion part?
-  - 
-- Mayber also offer two options:
-  - Option 1 (more science): use it for an image reconstruction task as a diffusion prior
-  - Option 2 (more fun): could finetune to generate images following a galaxy class prompt (use CLIP...) or sample images / inpainting
+
+- Train toy model themselves (but provide architecture pre-built?)
+- Have participants implement the forward and reverse diffusion using Equinox and Diffrax.
+- Want training to take 5 minutes on a toy dataset. (Images of some sort?)
+- Then provide a pretrained large UNet for them to try out at the end.
+- Reference points:
+    - https://docs.kidger.site/equinox/examples/score_based_diffusion/
+    - https://github.com/Smith42/astroddpm
 
 -- BREAK ---
 
-### Protein Languae Models (Patrick and Johanna)
+### Protein language models (Patrick and Johanna)
+
 Overview & Intro (15 Min)
 
-Exercise (45 Min):
-TBD
+- Mostly about language models in general, not much protein-specific. (As we're trying to be science-topic-agnostic.)
 
+Exercise (45 Min):
+
+- Use pretrained https://github.com/patrick-kidger/esm2quinox
+- Fine-tune on some custom datasets.
+- Predict mutations + use a structure prediction head to see what they look like (aka get some pretty pictures)!
 
 ### Wrap-Up and Outlook (15 Min)
-- Provide summary...
-- Scaling-up : sharding etc., should be covered before?
-- Further ressources:
+
+- Sharding and autoparallelism
   - https://jax-ml.github.io/scaling-book/tpus/
-  - 
-
-
-
-
-
+- More ecosystem: numpyro, lineax, optimistix, ...
+  - https://docs.kidger.site/equinox/awesome-list/
+  - https://github.com/lockwo/awesome-jax
