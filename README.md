@@ -2,18 +2,46 @@
 
 Presented by **Axel Donath**, **Patrick Kidger**, **Johanna Haffner** and **Francois Lanusse**
 
-This tutorial is an introduction to generative AI for Science with Jax and the Jax scientific ecosystem. 
+## Abstract 
+In this tutorial we will dive into the world of generative AI for science with Jax and the Jax scientific ecosystem.
+Starting from limited prior experience with Numpy, Scipy and the Python standard library we will first introduce Jax's
+Numpy API, just in time compilation system, native support for tree based data structures and function transforms
+for differentiable and scalable programming. Equipped with these new tools, participants will tackle the understanding
+of the two most important model architectures behind the recent AI revolution in a scientific context from first principles:
+diffusion models for generating astronomical galaxy images and transformer based large language models for predicting the 
+structure of proteins. In the astronomy part participants will refine their undertanding of Jax tools and diffusion models,
+by coding forward and reverse diffusion processes for a toy problem, then scaling up to training on small scale
+astronomical image data and finally generating higher resolution images from a pretrained model. TBC
 
 
 ## Setup Instructions
+
+### Working on Nebari (recommended)
+As some of the exercises have higher computational demands we recommend to work in an Nebari session, which will
+provide access to GPUs. 
+
+
 Use colab or https://www.nebari.dev -- TBD! We do want GPUs.
 
 - Do we need separarate envs for the bio and astro part? No.
 - We'll provide preprocessed datasets for the astro section; premade transformer for the bio section.
 - We expect that everything will be of interest to everyone; the focus is on the JAX and GenAI rather than on the scientific applications.
 
+### Working locally (not recommended)
+Parts of the tutorial exerices can be done locally without access to GPUs or if you have a very capable machine. 
+
+Download the data:
+
+
+
+### Google Collab (backup, not recommended)
+In case none of the options above work, you can open then tutorial in a Google collab session.
+
+
+
 ## Requirements
-NumPy and some SciPy. Dataclasses, functools. No previous knowledge of either JAX or GenAI expected.
+NumPy and some SciPy. Dataclasses, functools. Knowledge on basic statistics, calculcus and linear algebra.
+No previous knowledge of either JAX or generative AI expected.
 
 ### Intro (30 Min)
 Intro, Motivation for JAX and Gen AI in science demonstrate setup. To bring everybody on the same level:
