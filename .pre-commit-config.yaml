@@ -1,0 +1,13 @@
+repos:
+- repo: https://github.com/dfm/black_nbconvert
+  rev: v0.4.0
+  hooks:
+  - id: black_nbconvert
+- repo: local
+  hooks:
+    - id: jupyter-nb-clear-output
+      name: jupyter-nb-clear-output
+      files: \.ipynb$
+      stages: [commit]
+      language: system
+      entry: jupyter nbconvert --clear-output --inplace
