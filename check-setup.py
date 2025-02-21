@@ -3,9 +3,11 @@ import importlib
 import warnings
 from pathlib import Path
 
-MODULE_IMPORT_NAMES = {}
+MODULE_IMPORT_NAMES = {
+     "scikit-learn": "sklearn",
+}
 
-IGNORE_MODULES = {"pre-commit"}
+IGNORE_MODULES = {"pre-commit", ""}
 
 
 message_success = (
@@ -26,7 +28,7 @@ def get_info_dependencies():
     info = {}
 
     with Path("requirements.txt").open() as fh:
-        dependencies = [line.strip().split("=")[0] for line in fh.readlines()]
+        dependencies = [line.strip().split(">=")[0] for line in fh.readlines()]
 
     for name in dependencies:
         if name in IGNORE_MODULES:
@@ -57,7 +59,7 @@ def print_info(info, title):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        prog="Pydantic Tutorial Setup Check",
+        prog="Jax for GenAI in Science Tutorial Setup Check",
         description="Check if all dependencies are installed.",
     )
 

@@ -7,4 +7,4 @@ optax>=0.2.4
 scikit-learn>=1.6.1
 torch>=2.6.0
 jupyter>=1.1.1
-
+requests>=2.31.0
