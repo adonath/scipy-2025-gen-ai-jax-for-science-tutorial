@@ -16,28 +16,21 @@ astronomical image data and finally generating higher resolution images from a p
 
 ## Setup Instructions
 
-### Working on Nebari (recommended)
-As some of the exercises have higher computational demands we recommend to work in an Nebari session, which will
-provide access to GPUs. 
-
-
 Use colab or https://www.nebari.dev -- TBD! We do want GPUs.
 
 - Do we need separarate envs for the bio and astro part? No.
 - We'll provide preprocessed datasets for the astro section; premade transformer for the bio section.
 - We expect that everything will be of interest to everyone; the focus is on the JAX and GenAI rather than on the scientific applications.
 
+### Working on Nebari (recommended)
+As some of the exercises have higher computational demands we recommend to work in an Nebari session, which will
+provide access to GPUs.
+
+### Google Colab
+You can open then tutorial in a Google Colab session. This typically offers some access to GPUs.
+
 ### Working locally (not recommended)
-Parts of the tutorial exerices can be done locally without access to GPUs or if you have a very capable machine. 
-
-Download the data:
-
-
-
-### Google Collab (backup, not recommended)
-In case none of the options above work, you can open then tutorial in a Google collab session.
-
-
+The tutorial exerices can also be done locally if you have a very capable machine.
 
 ## Requirements
 NumPy and some SciPy. Dataclasses, functools. Knowledge on basic statistics, calculcus and linear algebra.
