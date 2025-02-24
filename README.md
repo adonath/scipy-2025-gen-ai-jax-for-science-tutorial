@@ -35,6 +35,7 @@ The tutorial exerices can also be done locally if you have a very capable machin
 ## Requirements
 NumPy and some SciPy. Dataclasses, functools. Knowledge on basic statistics, calculcus and linear algebra.
 No previous knowledge of either JAX or generative AI expected.
+Astro and bio are used as applications and we expect both parts to be of interest to the whole audience.
 
 ### Intro (30 Min)
 Intro, Motivation for JAX and Gen AI in science demonstrate setup. To bring everybody on the same level:
