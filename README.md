@@ -26,8 +26,8 @@ Use colab or https://www.nebari.dev -- TBD! We do want GPUs.
 As some of the exercises have higher computational demands we recommend to work in an Nebari session, which will
 provide access to GPUs.
 
-### Google Collab
-You can open then tutorial in a Google collab session. This typically offers some access to GPUs.
+### Google Colab
+You can open then tutorial in a Google Colab session. This typically offers some access to GPUs.
 
 ### Working locally (not recommended)
 The tutorial exerices can also be done locally if you have a very capable machine.
