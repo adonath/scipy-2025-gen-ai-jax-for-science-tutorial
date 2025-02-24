@@ -1,4 +1,4 @@
-# Jax and Generative AI for Science
+# JAX and Generative AI for Science
 
 Presented by **Axel Donath**, **Patrick Kidger**, **Johanna Haffner** and **Francois Lanusse**
 
