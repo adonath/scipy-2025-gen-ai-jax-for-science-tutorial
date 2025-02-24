@@ -69,20 +69,24 @@ Exercise (45 Min):
 
 ### Protein language models (Patrick and Johanna)
 
-Overview & Intro (15 Min)
+Protein language models (Patrick and Johanna)
 
-- Mostly about language models in general, not much protein-specific. (As we're trying to be science-topic-agnostic.)
+**Overview and Intro (15 minutes)**
 
-Exercise (45 Min):
+This will cover an introduction to encoder-only transformer architectures, and to representation learning / masked language modelling. This will be framed in terms of applications to both protein sequences (without requiring participants to already be familiar with proteins) and natural language.
 
-- Use pretrained https://github.com/patrick-kidger/esm2quinox
-- Fine-tune on some custom datasets.
-- Predict mutations + use a structure prediction head to see what they look like (aka get some pretty pictures)!
+**Exercise (45 minutes)**
+
+Models with pretrained weights will be available from https://github.com/patrick-kidger/esm2quinox. These will serve as a useful technical reference for those new to either JAX or new to transformers. Participants will additionally have access to a dataset of protein thermostability measurements. Putting these two together, they will attempt to generate novel proteins with high predicted thermostability.
+
+ESMFold wil be used to visualize structures for the generated candidates, and we may run a small competition to see who can get the best sequences (as evaluated by the instructor's somewhat larger model!)
 
 ### Wrap-Up and Outlook (15 Min)
 
+Overall, participants will leave with an introduction to the scientific JAX ecosystem, and what can be done with an 'autodifferentiable GPU-capable scipy'. Concluding topics for further reading include:
+
 - Sharding and autoparallelism
   - https://jax-ml.github.io/scaling-book/tpus/
-- More ecosystem: numpyro, lineax, optimistix, ...
+- More ecosystem: numpyro, Lineax, Optimistix, ...
   - https://docs.kidger.site/equinox/awesome-list/
   - https://github.com/lockwo/awesome-jax
