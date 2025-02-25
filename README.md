@@ -1,18 +1,17 @@
-# Jax and Generative AI for Science
+# JAX and Generative AI for Science
 
 Presented by **Axel Donath**, **Patrick Kidger**, **Johanna Haffner** and **Francois Lanusse**
 
 ## Abstract 
-In this tutorial we will dive into the world of generative AI for science with Jax and the Jax scientific ecosystem.
-Starting from limited prior experience with Numpy, Scipy and the Python standard library we will first introduce Jax's
-Numpy API, just in time compilation system, native support for tree based data structures and function transforms
-for differentiable and scalable programming. Equipped with these new tools, participants will tackle the understanding
-of the two most important model architectures behind the recent AI revolution in a scientific context from first principles:
-diffusion models for generating astronomical galaxy images and transformer based large language models for predicting the 
-structure of proteins. In the astronomy part participants will refine their undertanding of Jax tools and diffusion models,
-by coding forward and reverse diffusion processes for a toy problem, then scaling up to training on small scale
-astronomical image data and finally generating higher resolution images from a pretrained model. TBC
+In this tutorial we will dive into the world of generative AI for science with JAX and the JAX scientific ecosystem ('autodifferentiable GPU-capable scipy').
+Starting from prior experience with NumPy, SciPy and the Python standard library we will first introduce JAX's own
+NumPy-like API, Just-In-Time compilation system, native support for tree based data structures, and function transforms
+for differentiable and scalable programming. Equipped with these new tools, participants will tackle
+two important generative AI paradigms, as applied to scientific problems:
+diffusion models for generating astronomical galaxy images, and transformer based large language models for understanding the 
+sequence and structure of proteins.
 
+(NB abstract is intended to be around 100 words or less -- this is at 101.)
 
 ## Setup Instructions
 
