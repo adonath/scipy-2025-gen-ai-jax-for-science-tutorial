@@ -73,7 +73,7 @@ Protein language models (Patrick and Johanna)
 
 **Overview and Intro (15 minutes)**
 
-This will cover an introduction to encoder-only transformer architectures, and to representation learning / masked language modelling. This will be framed in terms of applications to both protein sequences (without requiring participants to already be familiar with proteins) and natural language.
+This will cover an introduction to encoder-only transformer architectures, and to representation learning / masked language modelling / self-supervised training. This will be framed in terms of applications to both protein sequences (without requiring participants to already be familiar with proteins) and natural language.
 
 **Exercise (45 minutes)**
 
