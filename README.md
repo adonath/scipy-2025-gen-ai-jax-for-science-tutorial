@@ -13,24 +13,6 @@ sequence and structure of proteins.
 
 (NB abstract is intended to be around 100 words or less -- this is at 101.)
 
-## Setup Instructions
-
-Use colab or https://www.nebari.dev -- TBD! We do want GPUs.
-
-- Do we need separarate envs for the bio and astro part? No.
-- We'll provide preprocessed datasets for the astro section; premade transformer for the bio section.
-- We expect that everything will be of interest to everyone; the focus is on the JAX and GenAI rather than on the scientific applications.
-
-### Working on Nebari (recommended)
-As some of the exercises have higher computational demands we recommend to work in an Nebari session, which will
-provide access to GPUs.
-
-### Google Colab
-You can open then tutorial in a Google Colab session. This typically offers some access to GPUs.
-
-### Working locally (not recommended)
-The tutorial exerices can also be done locally if you have a very capable machine.
-
 ## Requirements
 Experience with NumPy and some SciPy, dataclasses and functools from the standard library. Knowledge on basic statistics, calculcus and linear algebra. No previous knowledge of either JAX or generative AI expected. Astronomy and biology are used as applications and we expect both parts to be of interest to the whole audience.
 
@@ -97,3 +79,67 @@ Overall, participants will leave with an introduction to generative AI, the scie
 - More ecosystem: numpyro, Lineax, Optimistix, ...
   - https://docs.kidger.site/equinox/awesome-list/
   - https://github.com/lockwo/awesome-jax
+
+
+
+## Setup Instructions
+To execute the notebooks and examples in this tutorial, you will have the choice between three different environments:
+
+### Working on Nebari (recommended)
+As some of the exercises have higher computational demands we recommend to work in an Nebari session, which will provide access to GPUs. Nebari will provide a pre-defined enviroment for this tutorial. Detailed instructions will follow, but will be similar to the [instructions from 2024](https://docs.google.com/document/d/11YWMZKW6Y4tXnMs3Jekc1S7BQWTR6THZazDaq3WoNxw/edit?tab=t.0#heading=h.wtozhevy8waj). Access to the GPU servers will likely require a special coupon, that we will share at the beginning of the tutorial session.
+
+
+### Google Colab
+Alternatively if Nebari is not available, you can use Google Colab as an alternative. In this case you have to install the requirements in a Colab session. This can be done by running the following command in a code cell:
+
+```python
+import sys
+!{sys.executable} -m pip install -r requirements.txt
+```
+
+This wil make sure to install the requirements in the current Python environment.
+
+Open questions:
+- How to mount / open the whole repo in Colab?
+- Do participants need a pro account?
+
+
+### Working locally (not recommended)
+Some of the tutorial exercices can also be done locally if you have a very capable machine, however keep in mind this might not be sufficient for all exercises and will keep your machine busy for a while on the advanced exercises.
+
+Working locally requires a working Python >=3.10 installation.
+
+In any case start by cloning the repository:
+
+```bash
+git clone https://github.com/adonath/scipy-2025-gen-ai-jax-for-science-tutorial
+cd scipy-2025-gen-ai-jax-for-science-tutorial
+```
+
+
+#### Using A System Python
+If you are using a system Python, we recommend to create a virtual environment first. This can be done with the following command:
+
+```bash
+python -m venv scipy-2025-jax-gen-ai-tutorial
+source ./scipy-2025-jax-gen-ai-tutorial/bin/activate
+python -m pip install -r requirements.txt
+```
+
+### Using uv
+If you are using [uv](https://docs.astral.sh/uv/getting-started/installation/) we would also recommend to create a new environment with the following command:
+
+```bash
+uv venv scipy-2025-jax-gen-ai-tutorial --python 3.12
+uv pip install -r requirements.txt
+source .venv/bin/activate
+```
+
+#### Using Conda / Mamba
+
+If you are using [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) or [Mamba](https://github.com/conda-forge/miniforge?tab=readme-ov-file#unix-like-platforms-macos-linux--wsl), we recommend to create a new environment with the following command:
+
+```bash 
+conda create --name scipy-2025-jax-gen-ai-tutorial --file requirements.txt
+conda activate scipy-2025-jax-gen-ai-tutorial
+```
