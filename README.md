@@ -48,14 +48,12 @@ Short introduction and motivation for JAX and Generative AI in science. To bring
 - Function transforms: `jit`, `vmap`, `grad`, `scan`
 - Pytrees and tree manipulation: `tree_map` and tree support in function transforms
 - Trace time vs runtime, devices and `jax.debug.<>` 
-- JAX science ecosystem overview (Equinox, Diffrax, Optax)
+- JAX scientific ecosystem overview (Equinox, Diffrax, Optax)
 
-This overview will be rather dense, but participants will have some more time to digest the material
-in the warm-up exercises.
 
 #### Warm-Up Exercises (30 Min)
 - Figure out set-up, open laptops, debug environments, ... !
-- Hands on with the above
+- Hands on with the above, including understand Langevin Dynamics sampling by replicating Fig 1 from Song et al 2021 using pure JAX
 
 -- BREAK --- (15 Min)
 
@@ -69,7 +67,7 @@ lensing.
 
 **Diffusion Exercises (45 Min)**
 
-Participants will implement and understand Langevin Dynamics sampling by replicating Fig 1 from Song et al 2021 using pure JAX. Then we will make the transition to score matching and time conditioned score functions, understanding the continuous-time diffusion process and its relation to ODEs on the "swiss role" example. Finally participants will implement the full forward and reverse diffusion process for U-Net based DDPM, train on a size-reduced astro dataset, and generate full size images from the pretrained Astro-DDPM model, we will make available.
+The exercices will cover score matching and time conditioned score functions on the "Swiss role" example. This will help participants understanding the continuous-time diffusion process and its relation to ODEs. This knowledge they will use to implement the full forward and reverse diffusion process for U-Net based DDPM, train it on a small-szie astro dataset, and generate full size images from the pretrained Astro-DDPM model, which we will make available.
 
 Further ressources: 
     - https://docs.kidger.site/equinox/examples/score_based_diffusion/
@@ -92,7 +90,7 @@ ESMFold wil be used to visualize structures for the generated candidates, and we
 
 ### Wrap-Up and Outlook (15 Min)
 
-Overall, participants will leave with an introduction to generative AI, the scientific JAX ecosystem and, and what can be done with an 'autodifferentiable GPU-capable scipy'. Concluding topics for further reading include:
+Overall, participants will leave with an introduction to generative AI, the scientific JAX ecosystem, and what can be done with an 'autodifferentiable GPU-capable scipy'. Concluding topics for further reading include:
 
 - Sharding and autoparallelism
   - https://jax-ml.github.io/scaling-book/tpus/
