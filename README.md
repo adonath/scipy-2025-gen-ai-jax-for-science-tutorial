@@ -32,44 +32,51 @@ You can open then tutorial in a Google Colab session. This typically offers some
 The tutorial exerices can also be done locally if you have a very capable machine.
 
 ## Requirements
-NumPy and some SciPy. Dataclasses, functools. Knowledge on basic statistics, calculcus and linear algebra.
-No previous knowledge of either JAX or generative AI expected.
-Astro and bio are used as applications and we expect both parts to be of interest to the whole audience.
+Experience with NumPy and some SciPy, dataclasses and functools from the standard library. Knowledge on basic statistics, calculcus and linear algebra. No previous knowledge of either JAX or generative AI expected. Astronomy and biology are used as applications and we expect both parts to be of interest to the whole audience.
 
-### Intro (30 Min)
-Intro, Motivation for JAX and Gen AI in science demonstrate setup. To bring everybody on the same level:
-- JAX basics overview: NumPy API, jit, vmap grad, PyTrees (Axel)
-- Trace time vs runtime (https://kidger.site/thoughts/torch2jax/)
-- JAX science ecosystem overview (Equinox, Diffrax, Optax) (Patrick)
-- `jax.debug.<>`
+**Optionally** participants can prepare for the tutorial by reading the following resources. Not required, but
+might provide a smoother experience when working on the exercises:
 
-### Warm-Up (30 Min)
+- JAX magical Numpy Tutorial from Scipy 2021: https://ericmjl.github.io/notes/tutorial-proposals/magical-numpy-with-jax-scipy-2021/ 
+- Thoughts on JAX coming from PyTorch: https://kidger.site/thoughts/torch2jax/
+
+
+### Introduction (30 Min)
+Short introduction and motivation for JAX and Generative AI in science. To bring everybody on the same level we will start with:
+
+- JAX basics overview: NumPy API
+- Function transforms: `jit`, `vmap`, `grad`, `scan`
+- Pytrees and tree manipulation: `tree_map` and tree support in function transforms
+- Trace time vs runtime, devices and `jax.debug.<>` 
+- JAX scientific ecosystem overview (Equinox, Diffrax, Optax)
+
+
+#### Warm-Up Exercises (30 Min)
 - Figure out set-up, open laptops, debug environments, ... !
-- Hands on with the above.
+- Hands on with the above, including understand Langevin Dynamics sampling by replicating Fig 1 from Song et al 2021 using pure JAX
 
--- BREAK ---
+-- BREAK --- (15 Min)
 
-### Diffusion Models for Astronomical Image Generation and Reconstruction (Axel + Francois)
+### Diffusion Models for Astronomical Image Generation (Axel + Francois)
 
-Overview & Intro (15 Min) (Francois)
+**Overview and Intro (15 minutes)**
 
-- Continuous-time diffusion (ODEs will be more familiar for a scipy audience)
+In this section we will introduce diffusion models from a theoretical perspective and 
+demostrate their application for image reconstruction in radio astronomy and gravitational
+lensing. 
 
-Exercise (45 Min):
+**Diffusion Exercises (45 Min)**
 
-- Train toy model themselves (but provide architecture pre-built?)
-- Have participants implement the forward and reverse diffusion using Equinox and Diffrax.
-- Want training to take 5 minutes on a toy dataset. (Images of some sort?)
-- Then provide a pretrained large UNet for them to try out at the end.
-- Reference points:
+The exercices will cover score matching and time conditioned score functions on the "Swiss role" example. This will help participants understanding the continuous-time diffusion process and its relation to ODEs. This knowledge they will use to implement the full forward and reverse diffusion process for U-Net based DDPM, train it on a small-szie astro dataset, and generate full size images from the pretrained Astro-DDPM model, which we will make available.
+
+Further ressources: 
     - https://docs.kidger.site/equinox/examples/score_based_diffusion/
     - https://github.com/Smith42/astroddpm
 
--- BREAK ---
 
-### Protein language models (Patrick and Johanna)
+-- BREAK --- (15 Min)
 
-Protein language models (Patrick and Johanna)
+### Protein Language Models (Patrick and Johanna)
 
 **Overview and Intro (15 minutes)**
 
@@ -83,7 +90,7 @@ ESMFold wil be used to visualize structures for the generated candidates, and we
 
 ### Wrap-Up and Outlook (15 Min)
 
-Overall, participants will leave with an introduction to the scientific JAX ecosystem, and what can be done with an 'autodifferentiable GPU-capable scipy'. Concluding topics for further reading include:
+Overall, participants will leave with an introduction to generative AI, the scientific JAX ecosystem, and what can be done with an 'autodifferentiable GPU-capable scipy'. Concluding topics for further reading include:
 
 - Sharding and autoparallelism
   - https://jax-ml.github.io/scaling-book/tpus/
