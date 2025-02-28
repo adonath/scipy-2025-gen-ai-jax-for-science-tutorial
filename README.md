@@ -90,24 +90,15 @@ As some of the exercises have higher computational demands we recommend to work 
 
 
 ### Google Colab
-Alternatively if Nebari is not available, you can use Google Colab as an alternative. In this case you have to install the requirements in a Colab session. This can be done by running the following command in a code cell:
+Alternatively if Nebari is not available, you can use Google Colab as an alternative. We will provide direct links to open an a copy the notebooks in Colab and include a commented cell at the beginning of each notebook to install the required dependencies for the notebook to run. 
 
-```python
-import sys
-!{sys.executable} -m pip install -r requirements.txt
-```
-
-This wil make sure to install the requirements in the current Python environment.
-
-Open questions:
-- How to mount / open the whole repo in Colab?
-- Do participants need a pro account?
+To enable GPUs or TPUs in colab you have to change the runtime environment to GPU or TPU. This can be done by clicking on `Runtime` -> `Change runtime type` and selecting the desired hardware accelerator. We will update the instructions with more detailed information on which accelerator to choose, once we have a better understanding of the computational requirements of the exercises.
 
 
 ### Working locally (not recommended)
 Some of the tutorial exercices can also be done locally if you have a very capable machine, however keep in mind this might not be sufficient for all exercises and will keep your machine busy for a while on the advanced exercises.
 
-Working locally requires a working Python >=3.10 installation.
+Working locally requires a working Python >=3.10 installation. 
 
 In any case start by cloning the repository:
 
@@ -116,9 +107,7 @@ git clone https://github.com/adonath/scipy-2025-gen-ai-jax-for-science-tutorial
 cd scipy-2025-gen-ai-jax-for-science-tutorial
 ```
 
-
-#### Using A System Python
-If you are using a system Python, we recommend to create a virtual environment first. This can be done with the following command:
+We recommend to create a virtual environment first. This can be done with the following command:
 
 ```bash
 python -m venv scipy-2025-jax-gen-ai-tutorial
@@ -126,20 +115,4 @@ source ./scipy-2025-jax-gen-ai-tutorial/bin/activate
 python -m pip install -r requirements.txt
 ```
 
-### Using uv
-If you are using [uv](https://docs.astral.sh/uv/getting-started/installation/) we would also recommend to create a new environment with the following command:
-
-```bash
-uv venv scipy-2025-jax-gen-ai-tutorial --python 3.12
-uv pip install -r requirements.txt
-source .venv/bin/activate
-```
-
-#### Using Conda / Mamba
-
-If you are using [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) or [Mamba](https://github.com/conda-forge/miniforge?tab=readme-ov-file#unix-like-platforms-macos-linux--wsl), we recommend to create a new environment with the following command:
-
-```bash 
-conda create --name scipy-2025-jax-gen-ai-tutorial --file requirements.txt
-conda activate scipy-2025-jax-gen-ai-tutorial
-```
+Alternatively you can use any other package manager like `uv`, `pix`, `conda` to handle your Python environment. We do not provide detailed instructions for these, but we can provide local support, if you run into any issues with the provided `requirements.txt` file.
