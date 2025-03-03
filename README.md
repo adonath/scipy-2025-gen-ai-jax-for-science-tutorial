@@ -1,5 +1,9 @@
 # JAX and Generative AI for Science
 
+<p align="center">
+<img width="50%" src="https://raw.githubusercontent.com/adonath/scipy-2025-gen-ai-jax-for-science-tutorial/main/jax-gen-ai-banner.jpg" alt="banner"/>
+</p>
+
 Presented by **Axel Donath**, **Patrick Kidger**, **Johanna Haffner** and **Francois Lanusse**
 
 ## Abstract 
