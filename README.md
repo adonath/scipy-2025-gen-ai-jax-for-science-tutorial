@@ -24,7 +24,6 @@ The third block will start with a general introduction on large language models 
 Participants will leave with an to generative AI and be ready to apply concepts of generative AI and JAX for their own projects in their scientific domain.
 
 
-
 ## Requirements
 Experience with NumPy and some SciPy, dataclasses and functools from the standard library. Knowledge on basic statistics, calculcus and linear algebra. No previous knowledge of either JAX or generative AI expected. Astronomy and biology are used as applications and we expect both parts to be of interest to the whole audience.
 
@@ -34,6 +33,7 @@ might provide a smoother experience when working on the exercises:
 - JAX magical Numpy Tutorial from Scipy 2021: https://ericmjl.github.io/notes/tutorial-proposals/magical-numpy-with-jax-scipy-2021/ 
 - Thoughts on JAX coming from PyTorch: https://kidger.site/thoughts/torch2jax/
 
+## Content Overview
 
 ### Introduction (30 Min)
 Short introduction and motivation for JAX and Generative AI in science. To bring everybody on the same level we will start with:
