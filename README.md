@@ -25,24 +25,6 @@ Participants will leave with an to generative AI and be ready to apply concepts 
 
 
 
-## Setup Instructions
-
-Use colab or https://www.nebari.dev -- TBD! We do want GPUs.
-
-- Do we need separarate envs for the bio and astro part? No.
-- We'll provide preprocessed datasets for the astro section; premade transformer for the bio section.
-- We expect that everything will be of interest to everyone; the focus is on the JAX and GenAI rather than on the scientific applications.
-
-### Working on Nebari (recommended)
-As some of the exercises have higher computational demands we recommend to work in an Nebari session, which will
-provide access to GPUs.
-
-### Google Colab
-You can open then tutorial in a Google Colab session. This typically offers some access to GPUs.
-
-### Working locally (not recommended)
-The tutorial exerices can also be done locally if you have a very capable machine.
-
 ## Requirements
 Experience with NumPy and some SciPy, dataclasses and functools from the standard library. Knowledge on basic statistics, calculcus and linear algebra. No previous knowledge of either JAX or generative AI expected. Astronomy and biology are used as applications and we expect both parts to be of interest to the whole audience.
 
@@ -109,3 +91,40 @@ Overall, participants will leave with an introduction to generative AI, the scie
 - More ecosystem: numpyro, Lineax, Optimistix, ...
   - https://docs.kidger.site/equinox/awesome-list/
   - https://github.com/lockwo/awesome-jax
+
+
+
+## Setup Instructions
+To execute the notebooks and examples in this tutorial, you will have the choice between three different environments:
+
+### Working on Nebari (recommended)
+As some of the exercises have higher computational demands we recommend to work in an Nebari session, which will provide access to GPUs. Nebari will provide a pre-defined enviroment for this tutorial. Detailed instructions will follow, but will be similar to the [instructions from 2024](https://docs.google.com/document/d/11YWMZKW6Y4tXnMs3Jekc1S7BQWTR6THZazDaq3WoNxw/edit?tab=t.0#heading=h.wtozhevy8waj). Access to the GPU servers will likely require a special coupon, that we will share at the beginning of the tutorial session.
+
+
+### Google Colab
+Alternatively if Nebari is not available, you can use Google Colab as an alternative. We will provide direct links to open an a copy the notebooks in Colab and include a commented cell at the beginning of each notebook to install the required dependencies for the notebook to run. 
+
+To enable GPUs or TPUs in colab you have to change the runtime environment to GPU or TPU. This can be done by clicking on `Runtime` -> `Change runtime type` and selecting the desired hardware accelerator. We will update the instructions with more detailed information on which accelerator to choose, once we have a better understanding of the computational requirements of the exercises.
+
+
+### Working locally (not recommended)
+Some of the tutorial exercices can also be done locally if you have a very capable machine, however keep in mind this might not be sufficient for all exercises and will keep your machine busy for a while on the advanced exercises.
+
+Working locally requires a working Python >=3.10 installation. 
+
+In any case start by cloning the repository:
+
+```bash
+git clone https://github.com/adonath/scipy-2025-gen-ai-jax-for-science-tutorial
+cd scipy-2025-gen-ai-jax-for-science-tutorial
+```
+
+We recommend to create a virtual environment first. This can be done with the following command:
+
+```bash
+python -m venv scipy-2025-jax-gen-ai-tutorial
+source ./scipy-2025-jax-gen-ai-tutorial/bin/activate
+python -m pip install -r requirements.txt
+```
+
+Alternatively you can use any other package manager like `uv`, `pix`, `conda` to handle your Python environment. We do not provide detailed instructions for these, but we can provide local support, if you run into any issues with the provided `requirements.txt` file.
