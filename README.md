@@ -7,15 +7,23 @@
 Presented by **Axel Donath**, **Patrick Kidger**, **Johanna Haffner** and **Francois Lanusse**
 
 ## Abstract 
-In this tutorial we will dive into the world of generative AI for science with JAX and the JAX scientific ecosystem ('autodifferentiable GPU-capable scipy').
-Starting from prior experience with NumPy, SciPy and the Python standard library we will first introduce JAX's own
-NumPy-like API, Just-In-Time compilation system, native support for tree based data structures, and function transforms
-for differentiable and scalable programming. Equipped with these new tools, participants will tackle
-two important generative AI paradigms, as applied to scientific problems:
-diffusion models for generating astronomical galaxy images, and transformer based large language models for understanding the 
-sequence and structure of proteins.
+In this tutorial we will dive into the world of generative AI for science with JAX and the JAX scientific ecosystem ("autodifferentiable GPU-capable Scipy"). Starting from prior experience with NumPy, SciPy and the Python standard library we will first introduce JAX's own NumPy-like API, Just-In-Time compilation system, native support for tree based data structures, and function transforms for differentiable and scalable programming. Equipped with these new tools, participants will tackle two important generative AI paradigms, as applied to scientific problems: diffusion models for generating astronomical galaxy images, and transformer based large language models for understanding the sequence and structure of proteins.
 
-(NB abstract is intended to be around 100 words or less -- this is at 101.)
+## Description
+
+Generative AI plays an increasingly important role in scientific discovery, from generating new molecules to emulating complex physical systems. In this tutorial we will introduce JAX and the JAX scientific ecosystem and its application to generative AI for science. JAX is a Python library that provides a NumPy-like API, Just-In-Time compilation to XLA, and support for automatic differentiation and scalable programming and vectorization techniques. Its function based approach and native support for hardware accelerators, make it the ideal choice for many applications in generative AI
+and scientific computing in particular. In the tutorial we will cover two paradigms of generative AI: diffusion models and transformer based large language models. The tutorial is designed for participants with prior experience in Python, NumPy and SciPy, but no previous knowledge of JAX or generative AI is required.
+
+In the first block we will provide an in-depth introduction to JAX to bring all the participants to the same level.
+We will cover the JAX NumPy API, Just-In-Time compilation system, function transforms for differentiable and scalable programming, and JAX's native support for tree based data structures. An introductional hands-on exercise will follow, where particpants apply and practice the new JAX concepts to prepare them for real generative AI applications.
+
+In the second block we will cover the field of diffusion models in the context of astronomy. We will take the participants from the understanding of Langevin dynamics sampling, covered in the introduction, to score matching and time conditioned score functions. This will help participants understanding the continuous-time diffusion process and its relation to ordinary and stochastic differential equations. The exercises will first cover visualization of the diffusion process and flow function on the "Swiss roll" example. With the newly developed intuition we will then move to the implementation of the full forward and reverse diffusion process for a U-Net based denoising diffusion probabilistic model (DDPM). We will train the model on a small-size astro dataset, and generate full size images from the pretrained Astro-DDPM model.
+
+The third block will start with a general introduction on large language models LLM and their application and adaptation to the field of protein science. We will cover the basics of encoder-only transformer architectures, and introduce the concepts of representation learning and self-supervised training. This will be framed in terms of applications to both protein sequences (without requiring participants to already be familiar with proteins) and natural language. The exercises will include a hands-on session with pretrained models from the ESM2 family, which will serve as a useful technical reference for those new to either JAX or new to transformers. Participants will additionally have access to a dataset of protein thermostability measurements. Putting these two together, they will attempt to generate novel proteins with high predicted thermostability. ESMFold will be used to visualize structures for the generated candidates, and we may run a small competition to see who can get the best sequences (as evaluated by the instructor's somewhat larger model!).
+
+Participants will leave with an to generative AI and be ready to apply concepts of generative AI and JAX for their own projects in their scientific domain.
+
+
 
 ## Setup Instructions
 
